@@ -6,8 +6,14 @@
   "author": "DSchwartz",
   "license": "ISC",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "SET PORT=4000 && nodemon index.js"
+    "setup": "npm install && cd client && npm install",
+    "start": "node server/index.js",
+    "server": "set PORT=4000 && nodemon server/index.js",
+    "client": "cd client && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DvoraSchwartz/Books.git"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
