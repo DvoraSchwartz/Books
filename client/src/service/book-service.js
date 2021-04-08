@@ -13,7 +13,9 @@ async function callMyServer() {
 }
 async function getAllBooks() {
     try {
-        return await fetch(`${basicApi}books`)
+        return await fetch(`${basicApi}books`, {
+            headers: { 'Content-Type': 'application/json' }
+        })
 
             .then(res => { return res.json() })
             .then(result => { return result.data })
