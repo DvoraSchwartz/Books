@@ -8,16 +8,14 @@ const dbConnection = require('./DB')
 
 const BookRouter = require('./routes/bookRouter');
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 4000;
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.use(cors())
 const path = require('path');
 
 dbConnection.on('error', () => { console.log('dbConnection error') })
-app.get('/', (req, res) => {
-    res.status(200).json({ message: 'Please send your request' })
-})
+
 
 app.listen(PORT, () => console.log(`Api is working on ${PORT}`))
 app.use('/books', BookRouter)
