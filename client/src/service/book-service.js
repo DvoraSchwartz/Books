@@ -1,16 +1,16 @@
 const basicApi = 'http://localhost:4000/';
 
-async function callMyServer() {
-    try {
-        return await fetch(basicApi)
-            .then(res => { return res.json() })
-            .then(result => { return result.message })
+// async function callMyServer() {
+//     try {
+//         return await fetch(basicApi)
+//             .then(res => { return res.json() })
+//             .then(result => { return result.message })
 
-    }
-    catch (err) {
-        alert(err)
-    }
-}
+//     }
+//     catch (err) {
+//         console.log(err)
+//     }
+// }
 async function getAllBooks() {
     try {
         return await fetch(`${basicApi}books`, {
@@ -42,7 +42,6 @@ async function postBook(newBook) {
     }
 }
 export {
-    callMyServer,
     getAllBooks,
     postBook
 }

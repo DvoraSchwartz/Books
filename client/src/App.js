@@ -1,19 +1,18 @@
 import './App.css';
 import React, { useEffect, useState } from 'react'
 import BooksRouter from './BooksRouter';
-import { callMyServer } from './service/book-service'
+// import { callMyServer } from './service/book-service'
 function App() {
   const [result, setResult] = useState()
-  useEffect(callBasicApi, []);
+  // useEffect(callBasicApi, []);
 
-  function callBasicApi() {
-    callMyServer().then((res) => { setResult(res) })
-  }
+  // function callBasicApi() {
+  //   callMyServer().then((res) => { setResult(res) })
+  // }
 
   return (
     <div className="App">
       <BooksRouter />
-      {result}
     </div>
   );
 }
