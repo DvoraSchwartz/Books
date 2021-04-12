@@ -1,4 +1,5 @@
-const basicApi = 'http://localhost:4000/';
+let PORT = process.env.PORT || 4000
+const basicApi = `http://localhost:${PORT}/`;
 
 // async function callMyServer() {
 //     try {

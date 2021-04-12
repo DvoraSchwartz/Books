@@ -3,7 +3,6 @@ import React from "react";
 const Table = (props) => {
   const { booksItems } = props;
   return (<div>
-    Table
     <div>
       <table>
         <tr>
