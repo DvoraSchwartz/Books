@@ -30,6 +30,6 @@
     "nodemon": "^2.0.4"
   },
   "engines": {
-    "node": "15x"
+    "node": "15.x"
   }
 }
