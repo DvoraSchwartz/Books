@@ -10,6 +10,7 @@ function App() {
   //   callMyServer().then((res) => { setResult(res) })
   // }
 
+
   return (
     <div className="App">
       <BooksRouter />
@@ -18,6 +19,19 @@ function App() {
 }
 
 export default App;
+export function numAverage(...numbers) {
+  let total = 0;
+  for (const num of numbers) {
+    total += num;
+  }
+  return total / numbers.length;
+}
+
+export function sumNumbers(num1, num2) {
+  return num1 + num2
+}
+
+
 
 
 

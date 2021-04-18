@@ -7,15 +7,18 @@ const app = express()
 const dbConnection = require('./DB')
 
 const BookRouter = require('./routes/bookRouter');
-
+const path = require('path');
 const PORT = process.env.PORT || 4000;
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.use(cors())
-const path = require('path');
+
 
 dbConnection.on('error', () => { console.log('dbConnection error') })
 
+
+app.listen(PORT, () => console.log(`Api is working on ${PORT}`))
+app.use('/books', BookRouter)
 if (process.env.NODE_ENV === 'production') {
     // Serve any static files
     app.use(express.static(path.join(__dirname, '../client/build')));
@@ -24,5 +27,3 @@ if (process.env.NODE_ENV === 'production') {
         res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
     });
 }
-app.listen(PORT, () => console.log(`Api is working on ${PORT}`))
-app.use('/books', BookRouter)
