@@ -1,5 +1,5 @@
 // let PORT = process.env.PORT || 4000
-const basicApi = process.env.NODE_ENV === 'production' ? 'https ://books-mern-application.herokuapp.com/'
+const basicApi = process.env.NODE_ENV === 'production' ? 'https://books-mern-application.herokuapp.com/'
     : 'http://localhost:4000/';
 
 // async function callMyServer() {
@@ -15,9 +15,7 @@ const basicApi = process.env.NODE_ENV === 'production' ? 'https ://books-mern-ap
 // }
 async function getAllBooks() {
     try {
-        return await fetch(`${basicApi}books`, {
-            headers: { 'Content-Type': 'application/json' }
-        })
+        return await fetch(`${basicApi}books`)
 
             .then(res => { return res.json() })
             .then(result => { return result.data })
