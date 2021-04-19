@@ -6,7 +6,7 @@ const basicApi = process.env.NODE_ENV === 'production' ? 'https ://books-mern-ap
 //     try {
 //         return await fetch(basicApi)
 //             .then(res => { return res.json() })
-//             .then(result => { return result.message })
+//             .then(result => { return result.message })  
 
 //     }
 //     catch (err) {
