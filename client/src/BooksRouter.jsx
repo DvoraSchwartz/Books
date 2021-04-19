@@ -11,9 +11,9 @@ export default function BooksRouter() {
     return (
         <Router>
             <button><Link to='/'>Home</Link></button>
-            <button><Link to='/books'>Books</Link></button >
+            <button><Link to='/library'>Books</Link></button >
             <Switch>
-                <Route exact path="/books" component={Books} />
+                <Route exact path="/library" component={Books} />
                 <Route exact path="/" component={Home} />
             </Switch>
 
